@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  91助手
+//
+//  Created by 董晓萌 on 16/12/29.
+//  Copyright © 2016年 wyzc. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "UIBarButtonItem+Category.h"
+#import "UIView+Cate.h"
+#import "SDCycleScrollView.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "Masonry.h"
+// 日志输出
+#ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else // 发布阶段-上线阶段:移除Log
+#define NSLog(...)
+#endif
+
+// 弱引用
+#define WeakSelf __weak typeof(self) weakSelf = self;
+// 屏幕尺寸
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
